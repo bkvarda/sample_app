@@ -1,9 +1,9 @@
 ---
 # app manifest
 applications:
- - name: sampleapp623
+ - name: bksampleapp
    command: bundle exec rake cf:on_first_instance db:migrate && rails s -p $PORT
-   memory: 1G
-   host: sampleapp623
+   memory: 256M
+   host: bksampleapp
    services:
-     - elephantsql
+     - bkelephantsql
